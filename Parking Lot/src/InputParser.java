@@ -22,7 +22,7 @@ public class InputParser {
                     if (method != null) {
                         method.invoke(parkingLot);
                     } else {
-                        System.out.println("Invalid input");
+                        System.out.println("Input seems to be incorrect!Please follow format.");
                     }
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -36,7 +36,7 @@ public class InputParser {
                     if (method != null) {
                         method.invoke(parkingLot, inputs[1]);
                     } else {
-                        System.out.println("Invalid input");
+                        System.out.println("Input seems to be incorrect!Please follow format.");
                     }
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -50,7 +50,7 @@ public class InputParser {
                     if (method != null) {
                         method.invoke(parkingLot, inputs[1], inputs[3]);
                     } else {
-                        System.out.println("Invalid input");
+                        System.out.println("Input seems to be incorrect!Please follow format.");
                     }
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -59,7 +59,7 @@ public class InputParser {
                 }
                 break;
             default:
-                System.out.println("Invalid input.");
+                System.out.println("Input seems to be incorrect!Please follow format.");
         }
     }
     public void parseFileInput(String filePath) {

@@ -1,4 +1,4 @@
-import java.io.BufferedReader;
+import java.io.*;
 import java.io.IOException;
 import java.io.InputStreamReader;
 public class Main {
@@ -7,7 +7,7 @@ public class Main {
 	        switch (args.length) {
 	            case 0:
 	                System.out.println("Please enter 'stop' to quit");
-	                System.out.println("Waiting for input...");
+	                System.out.println("Waiting for user to enter...");
 	                // Interactive command-line input/output
 	                // Run an infinite loop
 	                for (;;) {
@@ -15,6 +15,7 @@ public class Main {
 	                        BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
 	                        String inputString = bufferRead.readLine();
 	                        if (inputString.equalsIgnoreCase("stop")) {
+	                        	System.out.println("Terminated");
 	                            break;
 	                        } else if ((inputString == null) || (inputString.isEmpty())) {
 	                            // Do nothing
@@ -32,7 +33,7 @@ public class Main {
 	                inputParser.parseFileInput(args[0]);
 	                break;
 	            default:
-	                System.out.println("Invalid input. Usage: java -jar <jar_file_path> <input_file_path>");
+	                System.out.println("Oops! Error in reading the input from console. Usage: java -jar <jar_file_path> <input_file_path>");
 	        }
 	    }
 
